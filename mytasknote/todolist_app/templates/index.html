@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Welcome to MyTaskNote</title>
+{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-10 offset-md-1">
+        <center><p class="h1 text-info">Welcome to MyTaskNote</p></center>
+        <center><p class="h3 mt-5">MYTASKNOTE Lets You Create To-do Lists Anywhere And Anytime.</p></center>
+        <center><p class="h5 mt-3">"Organizing your tasks with a list can make everything much more manageable and make you feel grounded"</p></center>
+
+        <!-- Services -->
+
+	        <div class="container mt-5">
+	            <div class="row">
+	                <div class="col services section-description wow fadeIn">
+	                    <center><h2>The Features</h2> </center>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                </div>
+	            </div>
+	            <div class="row mt-3">
+                	<div class="col-lg-4">
+	                    <center><img src="{% static 'images/add.png' %}" alt="Notes" class="rounded-lg shadow-sm mb-3" width="75" height="75"></center>
+	                    <center><p>Add a new task.</p></center>
+	                  </div>
+                    <div class="col-lg-4">
+	                    <center><img src="{% static 'images/edit.png' %}" alt="Notes" class="rounded-lg shadow-sm mb-3" width="75" height="75"></center>
+	                    <center><p>Edit task title and status</p></center>
+	                  </div>
+                    <div class="col-lg-4">
+	                    <center><img src="{% static 'images/delete.png' %}" alt="Notes" class="rounded-lg shadow-sm mb-3" width="75" height="75"></center>
+	                    <center><p>Delete task</p></center>
+	                   </div>
+
+	            </div>
+	        </div>
+
+
+        <center><a href="{% url 'todolist' %}"><button type="button" class="btn btn-info btn-lg mt-3 mb-5 shadow">Let's Get Started!</button></a></center>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

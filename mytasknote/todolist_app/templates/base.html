@@ -1,0 +1,54 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+    <link rel="icon" href="{% static 'images/data.png' %}" type="image/gif" sizes="16x16">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    {% block title %}
+    {% endblock title %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/data.png' %}" alt="mytasknote"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'todolist' %}">Todo List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="linkedin.com/in/gess-fathan-3139b343" ><img src="{% static 'images/linkedin.png' %}" alt="mytasknote"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/geszn" ><img src="{% static 'images/githubico.png' %}" alt="mytasknote" style="width:32px; height:32px;"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </head>
+  <body>
+
+    {% block content %}
+    {% endblock content %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  </body>
+</html>
